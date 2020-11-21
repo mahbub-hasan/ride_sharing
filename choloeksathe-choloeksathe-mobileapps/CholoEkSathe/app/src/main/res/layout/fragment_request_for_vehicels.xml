@@ -1,0 +1,94 @@
+<?xml version="1.0" encoding="utf-8"?>
+<android.support.design.widget.CoordinatorLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context="com.oss_net.choloeksathe.activities.passenger.PassengerProfileActivity">
+
+
+
+    <FrameLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        app:layout_behavior="@string/appbar_scrolling_view_behavior">
+
+        <com.google.android.gms.maps.MapView
+            android:id="@+id/passengerMap"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"/>
+
+
+        <ImageView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="10dp"
+            android:layout_marginLeft="10dp"
+            android:id="@+id/shownavbar"
+            android:src="@drawable/ic_action_navigation_black"/>
+
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical"
+            android:layout_gravity="top"
+            android:layout_marginTop="60dp"
+            android:layout_marginLeft="20dp"
+            android:layout_marginRight="20dp"
+            android:background="@drawable/drawable_rectangle">
+            <TextView
+                android:id="@+id/passengerSourceLocation"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:drawableStart="@drawable/ic_action_source"
+                android:background="@null"
+                android:padding="@dimen/mp_10"
+                android:hint="@string/tap_to_starting_point"
+                android:gravity="center_vertical"
+                android:maxLines="1"
+                android:ellipsize="end" />
+            <View
+                android:layout_width="match_parent"
+                android:layout_height="1px"
+                android:background="@android:color/darker_gray"/>
+            <TextView
+                android:id="@+id/passengerDestinationLocation"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:background="@null"
+                android:padding="@dimen/mp_10"
+                android:hint="@string/tap_to_destination_point"
+                android:drawableStart="@drawable/ic_action_destination"
+                android:gravity="center_vertical"
+                android:maxLines="1"
+                android:ellipsize="end"/>
+        </LinearLayout>
+
+        <ImageView
+            android:layout_width="40dp"
+            android:layout_height="40dp"
+            android:layout_gravity="bottom|right"
+            android:layout_marginBottom="65dp"
+            android:layout_marginEnd="@dimen/mp_10"
+            android:id="@+id/passengerLocation"
+            android:background="@drawable/drawable_my_location"
+            android:src="@drawable/ic_my_location_black_24dp"
+            android:padding="@dimen/mp_10"/>
+
+        <Button
+            android:id="@+id/buttonPassengerRequest"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_gravity="bottom"
+            android:layout_marginStart="20dp"
+            android:layout_marginEnd="20dp"
+            android:layout_marginTop="20dp"
+            android:layout_marginBottom="@dimen/mp_10"
+            android:textColor="@color/colorButtonText"
+            android:text="Next"
+            android:background="@color/colorAccent"/>
+
+    </FrameLayout>
+
+</android.support.design.widget.CoordinatorLayout>

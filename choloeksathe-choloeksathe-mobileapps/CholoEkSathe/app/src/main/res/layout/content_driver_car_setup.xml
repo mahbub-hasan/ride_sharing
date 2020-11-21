@@ -1,0 +1,215 @@
+<?xml version="1.0" encoding="utf-8"?>
+<android.support.v4.widget.NestedScrollView
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    android:padding="10dp"
+    app:layout_behavior="@string/appbar_scrolling_view_behavior"
+    tools:context="com.oss_net.choloeksathe.activities.driver.DriverCarSetupActivity"
+    tools:showIn="@layout/activity_driver_car_setup">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="@dimen/mp_10"
+        android:layout_marginStart="@dimen/mp_5"
+        android:layout_marginEnd="@dimen/mp_5"
+        android:layout_marginBottom="@dimen/mp_10"
+        android:orientation="vertical"
+        android:background="@drawable/drawable_rectangle">
+
+
+        <EditText
+            android:id="@+id/tilCarNumber"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="@dimen/mp_10"
+            android:gravity="center_vertical"
+            android:hint="Car Number"
+            android:inputType="text"
+            android:lines="1"
+            android:padding="@dimen/mp_10"
+            android:background="@null"/>
+
+        <View
+            android:layout_width="wrap_content"
+            android:layout_height="1px"
+            android:background="@android:color/darker_gray"/>
+
+        <EditText
+            android:id="@+id/tilCarModel"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="@dimen/mp_10"
+            android:gravity="center_vertical"
+            android:inputType="text"
+            android:hint="Car Model"
+            android:lines="1"
+            android:padding="@dimen/mp_10"
+            android:background="@null"/>
+
+        <View
+            android:layout_width="wrap_content"
+            android:layout_height="1px"
+            android:background="@android:color/darker_gray"/>
+
+        <EditText
+            android:id="@+id/tilCarOwnerName"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="@dimen/mp_10"
+            android:gravity="center_vertical"
+            android:hint="Car Owner Name"
+            android:inputType="text"
+            android:lines="1"
+            android:padding="@dimen/mp_10"
+            android:background="@null"/>
+
+        <View
+            android:layout_width="wrap_content"
+            android:layout_height="1px"
+            android:background="@android:color/darker_gray"/>
+
+        <EditText
+            android:id="@+id/tilCarOwnerContact"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="@dimen/mp_10"
+            android:gravity="center_vertical"
+            android:hint="Car Owner Contact Number"
+            android:inputType="phone"
+            android:lines="1"
+            android:padding="@dimen/mp_10"
+            android:background="@null"/>
+
+        <View
+            android:layout_width="wrap_content"
+            android:layout_height="1px"
+            android:background="@android:color/darker_gray"/>
+
+        <EditText
+            android:id="@+id/tilCarDetails"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="@dimen/mp_10"
+            android:gravity="center_vertical"
+            android:hint="Car Details"
+            android:inputType="text"
+            android:lines="1"
+            android:padding="@dimen/mp_10"
+            android:background="@null"/>
+
+        <View
+            android:layout_width="wrap_content"
+            android:layout_height="1px"
+            android:background="@android:color/darker_gray"/>
+
+        <EditText
+            android:id="@+id/tilCarDriverName"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="@dimen/mp_10"
+            android:gravity="center_vertical"
+            android:hint="Car DriverName"
+            android:inputType="text"
+            android:lines="1"
+            android:padding="@dimen/mp_10"
+            android:background="@null"/>
+
+        <View
+            android:layout_width="wrap_content"
+            android:layout_height="1px"
+            android:background="@android:color/darker_gray"/>
+
+        <EditText
+            android:id="@+id/tilCarDriverMobile"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="@dimen/mp_10"
+            android:gravity="center_vertical"
+            android:hint="Car Driver Mobile No"
+            android:inputType="phone"
+            android:lines="1"
+            android:padding="@dimen/mp_10"
+            android:background="@null"/>
+
+        <View
+            android:layout_width="wrap_content"
+            android:layout_height="1px"
+            android:background="@android:color/darker_gray"/>
+
+        <EditText
+            android:id="@+id/tilCarDriverRegNo"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="@dimen/mp_10"
+            android:gravity="center_vertical"
+            android:hint="Car Driver RegNo"
+            android:inputType="text"
+            android:lines="1"
+            android:padding="@dimen/mp_10"
+            android:background="@null"/>
+
+        <View
+            android:layout_width="wrap_content"
+            android:layout_height="1px"
+            android:background="@android:color/darker_gray"/>
+
+        <android.support.v7.widget.AppCompatSpinner
+            android:id="@+id/carType"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            style="@style/Widget.AppCompat.Spinner.Underlined"
+            android:spinnerMode="dropdown"
+            android:prompt="@string/gender"
+            android:layout_marginBottom="@dimen/mp_5">
+
+        </android.support.v7.widget.AppCompatSpinner>
+
+        <View
+            android:layout_width="wrap_content"
+            android:layout_height="1px"
+            android:background="@android:color/darker_gray"/>
+
+        <EditText
+            android:id="@+id/carNumberOfSit"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="@dimen/mp_10"
+            android:gravity="center_vertical"
+            android:hint="Number of sit"
+            android:inputType="number"
+            android:lines="1"
+            android:padding="@dimen/mp_10"
+            android:background="@null"/>
+
+        <View
+            android:layout_width="wrap_content"
+            android:layout_height="1px"
+            android:background="@android:color/darker_gray"/>
+
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal">
+            <android.support.v7.widget.AppCompatCheckBox
+                android:id="@+id/acAvailable"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:text="AC available"/>
+
+            <android.support.v7.widget.AppCompatCheckBox
+                android:id="@+id/carActive"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:text="Active"/>
+
+        </LinearLayout>
+    </LinearLayout>
+</android.support.v4.widget.NestedScrollView>

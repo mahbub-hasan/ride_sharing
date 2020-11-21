@@ -1,0 +1,107 @@
+<?xml version="1.0" encoding="utf-8"?>
+<android.support.v4.widget.NestedScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/colorApplicationBackground"
+    android:fillViewport="true"
+    android:fitsSystemWindows="true"
+    app:layout_behavior="@string/appbar_scrolling_view_behavior"
+    tools:context="com.oss_net.choloeksathe.activities.LoginActivity"
+    tools:showIn="@layout/activity_login">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:gravity="center"
+        android:orientation="vertical"
+        android:padding="@dimen/mp_10">
+
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:gravity="center"
+            android:text="@string/app_name"
+            android:textSize="30sp"
+            android:textStyle="bold" />
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="@dimen/mp_10"
+            android:background="@drawable/drawable_rectangle"
+            android:orientation="vertical">
+
+            <EditText
+                android:id="@+id/userMobileNo"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:background="@null"
+                android:drawablePadding="@dimen/mp_5"
+                android:drawableStart="@drawable/ic_action_mobile_number"
+                android:gravity="center_vertical"
+                android:hint="@string/mobile_number"
+                android:inputType="phone"
+                android:padding="@dimen/mp_10" />
+
+            <View
+                android:layout_width="wrap_content"
+                android:layout_height="1dp"
+                android:background="@android:color/darker_gray" />
+
+
+            <EditText
+                android:id="@+id/userPassword"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:background="@null"
+                android:drawablePadding="@dimen/mp_5"
+                android:drawableStart="@drawable/ic_action_password"
+                android:gravity="center_vertical"
+                android:hint="@string/password"
+                android:inputType="textPassword"
+                android:padding="@dimen/mp_10" />
+
+        </LinearLayout>
+
+        <CheckBox
+            android:id="@+id/ckShowPassword"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="right"
+            android:text="Show Password"
+            android:layout_marginEnd="@dimen/mp_10"/>
+
+        <TextView
+            android:id="@+id/forgetPass"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="right"
+            android:padding="@dimen/mp_5"
+            android:text="Forget Password?"
+            android:textColor="@android:color/holo_red_light" />
+
+        <Button
+            android:id="@+id/buttonLogin"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginBottom="@dimen/mp_10"
+            android:layout_marginTop="@dimen/mp_10"
+            android:background="@color/colorPrimaryDark"
+            android:text="Login"
+            android:textColor="@color/colorButtonText" />
+
+        <Button
+            android:id="@+id/buttonRegistration"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="@dimen/mp_10"
+            android:background="@color/colorAccent"
+            android:text="No account yet? Create one"
+            android:textColor="@color/colorButtonText" />
+
+    </LinearLayout>
+
+
+</android.support.v4.widget.NestedScrollView>

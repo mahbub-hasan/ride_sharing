@@ -1,0 +1,51 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:orientation="vertical">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        android:id="@+id/llStopOverNameListMainPanel">
+        <TextView
+            android:id="@+id/sourceLocationName"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:padding="@dimen/mp_5"
+            android:textSize="15sp"
+            android:drawableStart="@drawable/ic_action_source"
+            android:gravity="start|center_vertical"
+            android:maxLines="1"
+            android:ellipsize="end"/>
+
+        <TextView
+            android:id="@+id/destinationLocationName"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:padding="@dimen/mp_5"
+            android:textSize="15sp"
+            android:drawableStart="@drawable/ic_action_destination"
+            android:gravity="start|center_vertical"
+            android:maxLines="1"
+            android:ellipsize="end"/>
+
+        <View
+            android:layout_width="match_parent"
+            android:layout_height="1dp"
+            android:background="@color/colorAccent"/>
+    </LinearLayout>
+
+    <TextView
+        android:id="@+id/stopOverLocationNameNotFound"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:padding="@dimen/mp_5"
+        android:textSize="15sp"
+        android:gravity="start|center_vertical"
+        android:text="Car owner is not interest to showing stop overs."
+        android:visibility="gone"/>
+
+</LinearLayout>

@@ -1,0 +1,99 @@
+<?xml version="1.0" encoding="utf-8"?>
+<android.support.v4.widget.NestedScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:fillViewport="true"
+    android:fitsSystemWindows="true"
+    android:padding="10dp"
+    app:layout_behavior="@string/appbar_scrolling_view_behavior"
+    tools:context="com.oss_net.choloeksathe.activities.RegistrationActivity"
+    tools:showIn="@layout/activity_registration">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical"
+            android:background="@drawable/drawable_rectangle">
+
+            <EditText
+                android:id="@+id/tilFullName"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:drawableStart="@drawable/ic_action_full_name"
+                android:background="@null"
+                android:inputType="textCapSentences"
+                android:padding="@dimen/mp_10"
+                android:drawablePadding="@dimen/mp_5"
+                android:hint="@string/full_name"/>
+            <View
+                android:layout_width="match_parent"
+                android:layout_height="1px"
+                android:background="@android:color/darker_gray"/>
+
+            <EditText
+                android:id="@+id/tilMobileNumber"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:drawableStart="@drawable/ic_action_mobile_number"
+                android:background="@null"
+                android:inputType="phone"
+                android:padding="@dimen/mp_10"
+                android:drawablePadding="@dimen/mp_5"
+                android:hint="@string/mobile_number"/>
+            <View
+                android:layout_width="match_parent"
+                android:layout_height="1px"
+                android:background="@android:color/darker_gray"/>
+
+            <EditText
+                android:id="@+id/tilEmail"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:drawableStart="@drawable/ic_action_email"
+                android:background="@null"
+                android:inputType="textEmailAddress"
+                android:padding="@dimen/mp_10"
+                android:drawablePadding="@dimen/mp_5"
+                android:hint="@string/email"/>
+
+        </LinearLayout>
+
+        <android.support.v7.widget.AppCompatSpinner
+            android:id="@+id/spinnerUserCategory"
+            style="@style/Widget.AppCompat.Spinner.Underlined"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginBottom="@dimen/mp_5"
+            android:prompt="@string/category"
+            android:spinnerMode="dropdown">
+
+        </android.support.v7.widget.AppCompatSpinner>
+
+        <android.support.v7.widget.AppCompatSpinner
+            android:id="@+id/spinnerGender"
+            style="@style/Widget.AppCompat.Spinner.Underlined"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginBottom="@dimen/mp_5"
+            android:prompt="@string/gender"
+            android:spinnerMode="dropdown">
+
+        </android.support.v7.widget.AppCompatSpinner>
+
+        <Button
+            android:id="@+id/buttonRegistration"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="@dimen/mp_5"
+            android:background="@color/colorAccent"
+            android:text="Registration"
+            android:textColor="@color/colorButtonText" />
+    </LinearLayout>
+</android.support.v4.widget.NestedScrollView>

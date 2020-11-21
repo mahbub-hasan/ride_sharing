@@ -1,0 +1,39 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context="com.oss_net.choloeksathe.activities.SplashActivity">
+
+    <android.support.v7.widget.AppCompatImageView
+        android:id="@+id/car"
+        android:layout_width="match_parent"
+        android:layout_height="100dp"
+        android:contentDescription="CarWithPeople"
+        app:srcCompat="@drawable/carwithpeople"
+        android:layout_centerInParent="true"/>
+
+    <TextView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="Cholo Ek Sathe"
+        android:textStyle="bold"
+        android:gravity="center"
+        android:textSize="25sp"
+        android:textAllCaps="true"
+        android:textAppearance="@style/TextAppearance.AppCompat.Headline"
+        android:layout_below="@+id/car"
+        android:layout_marginBottom="50dp"
+        android:typeface="sans"/>
+
+    <ProgressBar
+        android:id="@+id/progressBar1"
+        android:layout_width="wrap_content"
+        android:layout_alignParentBottom="true"
+        android:layout_height="wrap_content"
+        android:layout_centerHorizontal="true"
+        android:layout_marginBottom="25dp"/>
+
+
+</RelativeLayout>

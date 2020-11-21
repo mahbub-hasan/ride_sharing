@@ -1,0 +1,104 @@
+<?xml version="1.0" encoding="utf-8"?>
+<com.sothree.slidinguppanel.SlidingUpPanelLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    tools:context="com.oss_net.choloeksathe.activities.driver.DriverCarShareActivity"
+    tools:showIn="@layout/fragment_car_share_main"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:id="@+id/slidingPanel"
+    android:gravity="bottom"
+    app:umanoPanelHeight="70dp"
+    app:umanoShadowHeight="5dp"
+    app:umanoParallaxOffset="100dp"
+    app:umanoDragView="@+id/dragView"
+    app:umanoOverlay="true"
+    app:umanoScrollableView="@+id/dragView">
+
+    <FrameLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:orientation="vertical">
+
+        <com.google.android.gms.maps.MapView
+            android:id="@+id/driverMap"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"/>
+
+        <ImageView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="10dp"
+            android:layout_marginLeft="10dp"
+            android:id="@+id/backpage"
+            android:src="@drawable/ic_arrow_back_black_24px"/>
+
+
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical"
+            android:layout_gravity="top"
+            android:layout_marginTop="70dp"
+            android:layout_marginLeft="20dp"
+            android:layout_marginRight="20dp"
+            android:background="@drawable/drawable_rectangle">
+            <TextView
+                android:id="@+id/driverSourceLocation"
+                android:layout_width="match_parent"
+                android:drawableStart="@drawable/ic_action_source"
+                android:layout_height="wrap_content"
+                android:background="@null"
+                android:padding="@dimen/mp_10"
+                android:hint="@string/tap_to_starting_point"
+                android:gravity="center_vertical"
+                android:maxLines="1"
+                android:ellipsize="end" />
+            <View
+                android:layout_width="match_parent"
+                android:layout_height="1px"
+                android:background="@android:color/darker_gray"/>
+            <TextView
+                android:id="@+id/driverDestinationLocation"
+                android:layout_width="match_parent"
+                android:drawableStart="@drawable/ic_action_destination"
+                android:layout_height="wrap_content"
+                android:background="@null"
+                android:padding="@dimen/mp_10"
+                android:hint="@string/tap_to_destination_point"
+                android:gravity="center_vertical"
+                android:maxLines="1"
+                android:ellipsize="end"/>
+        </LinearLayout>
+
+        <ImageView
+            android:layout_width="40dp"
+            android:layout_height="40dp"
+            android:layout_gravity="bottom|right"
+            android:layout_marginBottom="90dp"
+            android:layout_marginEnd="@dimen/mp_10"
+            android:id="@+id/driverLocation"
+            android:background="@drawable/drawable_my_location"
+            android:src="@drawable/ic_my_location_black_24dp"
+            android:padding="@dimen/mp_10"/>
+
+
+        <Button
+            android:id="@+id/buttonNext"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_gravity="bottom"
+            android:layout_margin="20dp"
+            android:textColor="@color/colorButtonText"
+            android:text="Next"
+            android:background="@color/colorAccent"
+            android:visibility="gone"/>
+
+    </FrameLayout>
+
+    <include layout="@layout/fragment_car_share_settings"/>
+
+</com.sothree.slidinguppanel.SlidingUpPanelLayout>
+

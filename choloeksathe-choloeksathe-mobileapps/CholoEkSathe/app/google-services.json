@@ -1,0 +1,55 @@
+{
+  "project_info": {
+    "project_number": "199870916086",
+    "firebase_url": "https://choloeksathe-948a4.firebaseio.com",
+    "project_id": "choloeksathe-948a4",
+    "storage_bucket": "choloeksathe-948a4.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:199870916086:android:14936fb1899eea33",
+        "android_client_info": {
+          "package_name": "com.oss_net.choloeksathe"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "199870916086-8t1f33u0bots4idmo32pkm2ibqf6u449.apps.googleusercontent.com",
+          "client_type": 1,
+          "android_info": {
+            "package_name": "com.oss_net.choloeksathe",
+            "certificate_hash": "4e712f07a42330683cbb86cfa1e6f03596dd2b67"
+          }
+        },
+        {
+          "client_id": "199870916086-qqhqulc9aifpj5lv5movigrffs6bptme.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyDfWT5E9TK5xXFzr-mvh2y4VeVuC9iqQ0s"
+        }
+      ],
+      "services": {
+        "analytics_service": {
+          "status": 1
+        },
+        "appinvite_service": {
+          "status": 2,
+          "other_platform_oauth_client": [
+            {
+              "client_id": "199870916086-qqhqulc9aifpj5lv5movigrffs6bptme.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        },
+        "ads_service": {
+          "status": 2
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}

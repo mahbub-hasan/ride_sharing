@@ -1,0 +1,207 @@
+<?xml version="1.0" encoding="utf-8"?>
+<android.support.v4.widget.NestedScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    app:layout_behavior="@string/appbar_scrolling_view_behavior"
+    tools:context="com.oss_net.choloeksathe.activities.passenger.PassengerProfileUpdateActivity"
+    tools:showIn="@layout/activity_passenger_profile_update">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:orientation="vertical">
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="120dp"
+            android:background="@color/colorPrimary">
+
+            <de.hdodenhof.circleimageview.CircleImageView
+                android:id="@+id/userImage"
+                android:layout_width="100dp"
+                android:layout_height="100dp"
+                android:layout_gravity="center"
+                android:layout_margin="@dimen/mp_10"
+                android:src="@mipmap/ic_launcher_round"
+                app:civ_border_color="@color/colorImageBorder"
+                app:civ_border_width="2dp" />
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_centerInParent="true"
+                android:layout_marginEnd="@dimen/mp_5"
+                android:layout_toEndOf="@id/userImage"
+                android:background="@drawable/drawable_rectangle"
+                android:orientation="vertical">
+
+                <EditText
+                    android:id="@+id/userFullName"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:background="@null"
+                    android:drawablePadding="@dimen/mp_3"
+                    android:drawableStart="@drawable/ic_action_full_name"
+                    android:gravity="center_vertical"
+                    android:hint="@string/full_name"
+                    android:inputType="textCapWords"
+                    android:lines="1"
+                    android:padding="@dimen/mp_5"
+                    android:textSize="15sp" />
+
+                <View
+                    android:layout_width="wrap_content"
+                    android:layout_height="1px"
+                    android:background="@android:color/darker_gray" />
+
+                <EditText
+                    android:id="@+id/userMobileNo"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:background="@null"
+                    android:drawablePadding="@dimen/mp_3"
+                    android:drawableStart="@drawable/ic_action_mobile_number"
+                    android:gravity="center_vertical"
+                    android:hint="@string/mobile_number"
+                    android:lines="1"
+                    android:padding="@dimen/mp_5"
+                    android:textSize="15sp" />
+            </LinearLayout>
+
+
+        </RelativeLayout>
+
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="@dimen/mp_10"
+            android:layout_marginStart="@dimen/mp_5"
+            android:layout_marginEnd="@dimen/mp_5"
+            android:orientation="vertical"
+            android:background="@drawable/drawable_rectangle">
+
+            <EditText
+                android:id="@+id/userEmail"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="@dimen/mp_10"
+                android:drawablePadding="@dimen/mp_10"
+                android:drawableStart="@drawable/ic_action_email"
+                android:gravity="center_vertical"
+                android:inputType="textEmailAddress"
+                android:lines="1"
+                android:background="@null"
+                android:padding="@dimen/mp_10" />
+
+            <View
+                android:layout_width="wrap_content"
+                android:layout_height="1px"
+                android:background="@android:color/darker_gray"/>
+
+
+            <EditText
+                android:id="@+id/userNID"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="@dimen/mp_10"
+                android:drawablePadding="@dimen/mp_10"
+                android:drawableStart="@drawable/ic_action_nid"
+                android:gravity="center_vertical"
+                android:inputType="number"
+                android:lines="1"
+                android:padding="@dimen/mp_10"
+                android:background="@null"/>
+
+            <View
+                android:layout_width="wrap_content"
+                android:layout_height="1px"
+                android:background="@android:color/darker_gray"/>
+
+            <Spinner
+                android:id="@+id/spinnerGender"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginBottom="@dimen/mp_5"
+                android:layout_marginLeft="@dimen/mp_10"
+                android:prompt="@string/gender"
+                android:spinnerMode="dropdown"/>
+
+            <View
+                android:layout_width="wrap_content"
+                android:layout_height="1px"
+                android:background="@android:color/darker_gray"/>
+
+            <EditText
+                android:id="@+id/userDOB"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="@dimen/mp_10"
+                android:clickable="false"
+                android:drawablePadding="@dimen/mp_10"
+                android:drawableStart="@drawable/ic_action_dob"
+                android:focusable="false"
+                android:gravity="center_vertical"
+                android:lines="1"
+                android:padding="@dimen/mp_10"
+                android:background="@null"/>
+
+            <View
+                android:layout_width="wrap_content"
+                android:layout_height="1px"
+                android:background="@android:color/darker_gray"/>
+
+            <EditText
+                android:id="@+id/userAddress"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="@dimen/mp_10"
+                android:drawablePadding="@dimen/mp_10"
+                android:drawableStart="@drawable/ic_action_address"
+                android:gravity="center_vertical"
+                android:inputType="textPostalAddress"
+                android:lines="1"
+                android:padding="@dimen/mp_10"
+                android:background="@null"/>
+
+            <View
+                android:layout_width="wrap_content"
+                android:layout_height="1px"
+                android:background="@android:color/darker_gray"/>
+
+            <EditText
+                android:id="@+id/userHomeAddress"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="@dimen/mp_10"
+                android:clickable="false"
+                android:drawablePadding="@dimen/mp_10"
+                android:drawableStart="@drawable/ic_action_location"
+                android:focusable="false"
+                android:gravity="center_vertical"
+                android:padding="@dimen/mp_10"
+                android:background="@null" />
+
+            <View
+                android:layout_width="wrap_content"
+                android:layout_height="1px"
+                android:background="@android:color/darker_gray"/>
+
+            <Spinner
+                android:id="@+id/spinnerCompany"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginBottom="@dimen/mp_5"
+                android:layout_marginLeft="@dimen/mp_10"
+                android:prompt="@string/gender"
+                android:spinnerMode="dropdown">
+
+            </Spinner>
+        </LinearLayout>
+
+
+    </LinearLayout>
+
+</android.support.v4.widget.NestedScrollView>

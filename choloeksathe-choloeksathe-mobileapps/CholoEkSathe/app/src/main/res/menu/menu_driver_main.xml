@@ -1,0 +1,35 @@
+<?xml version="1.0" encoding="utf-8"?>
+<menu xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto">
+
+    <item
+        android:id="@+id/action_driver_home"
+        android:title="Home"
+        android:icon="@drawable/ic_action_home"
+        app:showAsAction="always|withText"/>
+
+    <item
+        android:id="@+id/action_driver_car_share"
+        android:title="Car Share"
+        android:icon="@drawable/ic_action_car_share"
+        app:showAsAction="always|withText"/>
+
+    <item
+        android:id="@+id/action_driver_car_setup"
+        android:title="Car Setup"
+        android:icon="@drawable/ic_action_car_setup"
+        app:showAsAction="always|withText"/>
+
+    <item
+        android:id="@+id/action_driver_profile"
+        android:title="Profile"
+        android:icon="@drawable/ic_action_driver_profile"
+        app:showAsAction="always|collapseActionView"/>
+
+    <item
+        android:id="@+id/action_driver_logout"
+        android:title="Logout"
+        android:icon="@drawable/ic_action_logout"
+        app:showAsAction="always|withText"/>
+
+</menu>

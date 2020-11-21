@@ -1,0 +1,183 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/colorApplicationBackground"
+    android:orientation="vertical"
+    tools:context="com.oss_net.choloeksathe.activities.LocationSearchActivity">
+
+    <android.support.v7.widget.CardView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        app:cardBackgroundColor="@color/colorWhite"
+        app:cardElevation="@dimen/mp_5"
+        app:contentPadding="@dimen/mp_5">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical">
+
+            <ImageView
+                android:id="@+id/ivBack"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:src="@drawable/ic_action_back_black" />
+
+            <EditText
+                android:id="@+id/sourceLocationName"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginEnd="32dp"
+                android:layout_marginStart="30dp"
+                android:layout_marginTop="@dimen/mp_5"
+                android:background="@drawable/drawable_rec_no_corner"
+                android:hint="Enter pickup location"
+                android:padding="5dp"
+                android:lines="1"
+                android:singleLine="true"/>
+
+            <EditText
+                android:id="@+id/stopOverLocationPoint1"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginEnd="32dp"
+                android:layout_marginStart="30dp"
+                android:layout_marginTop="@dimen/mp_5"
+                android:background="@drawable/drawable_rec_no_corner"
+                android:hint="Add a stop"
+                android:padding="5dp"
+                android:visibility="gone"
+                android:lines="1"
+                android:singleLine="true"/>
+
+            <EditText
+                android:id="@+id/stopOverLocationPoint2"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginEnd="32dp"
+                android:layout_marginStart="30dp"
+                android:layout_marginTop="@dimen/mp_5"
+                android:background="@drawable/drawable_rec_no_corner"
+                android:hint="Add a stop"
+                android:padding="5dp"
+                android:visibility="gone"
+                android:lines="1"
+                android:singleLine="true"/>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal"
+                android:layout_marginTop="@dimen/mp_5">
+
+                <EditText
+                    android:id="@+id/destinationLocationName"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_marginStart="30dp"
+                    android:layout_weight="1"
+                    android:background="@drawable/drawable_rec_no_corner"
+                    android:hint="Where to?"
+                    android:padding="5dp"
+                    android:lines="1"
+                    android:singleLine="true"/>
+
+                <RelativeLayout
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content">
+                    <ImageView
+                        android:id="@+id/addStopOverLocations"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:src="@drawable/ic_action_add_stop_overs" />
+                    <ImageView
+                        android:id="@+id/clearStopOverLocations"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:src="@drawable/ic_action_stop_over_clear"
+                        android:visibility="gone"/>
+                </RelativeLayout>
+
+
+
+            </LinearLayout>
+
+
+        </LinearLayout>
+
+    </android.support.v7.widget.CardView>
+
+    <LinearLayout
+        android:id="@+id/llStopOverAdded"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_margin="@dimen/mp_5"
+        android:orientation="vertical"
+        android:gravity="center"
+        android:visibility="gone">
+        <ImageView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:src="@drawable/ic_action_watch"
+            android:layout_gravity="center_vertical"
+            android:layout_marginStart="@dimen/mp_20"
+            android:contentDescription="@string/todo"/>
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="Please keep stops to maximum 5 \nminutes or less"
+            android:textSize="17sp"
+            android:typeface="sans"
+            android:layout_marginStart="@dimen/mp_20"
+            android:layout_marginTop="@dimen/mp_5"
+            android:layout_marginEnd="@dimen/mp_5"/>
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="As a courtesy for your driver`s time, please limit each stop from 5 minutes to 3 minutes, otherwise your fare may charges."
+            android:textSize="15sp"
+            android:layout_marginStart="@dimen/mp_20"
+            android:layout_marginTop="@dimen/mp_5"
+            android:layout_marginEnd="@dimen/mp_5"/>
+        <Button
+            android:id="@+id/buttonDone"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="10dp"
+            android:layout_marginEnd="10dp"
+            android:layout_marginTop="@dimen/mp_10"
+            android:text="Done"/>
+    </LinearLayout>
+
+    <LinearLayout
+        android:id="@+id/llNoStopOver"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_margin="@dimen/mp_5"
+        android:orientation="vertical">
+        <android.support.v7.widget.RecyclerView
+            android:id="@+id/rvDestinationLocation"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content">
+
+        </android.support.v7.widget.RecyclerView>
+        <TextView
+            android:id="@+id/locationOnMap"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="@string/set_location_on_map"
+            android:drawableStart="@drawable/ic_action_from_map"
+            android:gravity="center_vertical"
+            android:drawablePadding="@dimen/mp_5"/>
+        <View
+            android:layout_width="match_parent"
+            android:layout_height="1px"
+            android:background="@android:color/darker_gray"
+            android:layout_marginStart="30dp"
+            android:layout_marginTop="@dimen/mp_5"/>
+    </LinearLayout>
+
+</LinearLayout>

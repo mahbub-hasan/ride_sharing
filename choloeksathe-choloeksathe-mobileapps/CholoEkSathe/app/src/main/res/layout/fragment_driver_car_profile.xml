@@ -1,0 +1,208 @@
+<android.support.v4.widget.NestedScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context="com.oss_net.choloeksathe.fragments.driver.DriverProfileFragment">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical">
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="120dp"
+            android:background="@color/colorPrimary">
+
+            <de.hdodenhof.circleimageview.CircleImageView
+                android:id="@+id/carImage"
+                android:layout_width="100dp"
+                android:layout_height="100dp"
+                android:layout_gravity="center_vertical"
+                android:layout_margin="@dimen/mp_10"
+                android:src="@mipmap/ic_launcher_round"
+                app:civ_border_color="@color/colorImageBorder"
+                app:civ_border_width="2dp" />
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_centerInParent="true"
+                android:layout_marginStart="@dimen/mp_5"
+                android:layout_toEndOf="@id/carImage"
+                android:gravity="center"
+                android:orientation="vertical">
+
+                <TextView
+                    android:id="@+id/carName"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="@dimen/mp_10"
+                    android:gravity="center_vertical"
+                    android:text="Mahbub hasan mridul"
+                    android:textColor="@color/colorWhite"
+                    android:textSize="20sp" />
+
+                <TextView
+                    android:id="@+id/carModel"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="@dimen/mp_5"
+                    android:gravity="center_vertical"
+                    android:text="Contact : 01937100297"
+                    android:textColor="@color/colorWhite"
+                    android:textSize="15sp" />
+
+            </LinearLayout>
+        </RelativeLayout>
+
+        <LinearLayout
+            android:id="@+id/llViewProfile"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginBottom="@dimen/mp_10"
+            android:layout_marginEnd="@dimen/mp_5"
+            android:layout_marginStart="@dimen/mp_5"
+            android:layout_marginTop="@dimen/mp_10"
+            android:background="@drawable/drawable_rectangle"
+            android:orientation="vertical"
+            android:visibility="visible">
+
+            <TextView
+                android:id="@+id/carOwnerName"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="@dimen/mp_10"
+                android:drawableStart="@drawable/ic_action_full_name"
+                android:drawablePadding="@dimen/mp_10"
+                android:gravity="start|center_vertical"
+                android:padding="@dimen/mp_10" />
+            <View
+                android:layout_width="match_parent"
+                android:layout_height="1px"
+                android:background="@android:color/darker_gray"/>
+
+            <TextView
+                android:id="@+id/carOwnerContactNumber"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="@dimen/mp_10"
+                android:drawableStart="@drawable/ic_action_mobile_number"
+                android:drawablePadding="@dimen/mp_10"
+                android:gravity="start|center_vertical"
+                android:padding="@dimen/mp_10" />
+            <View
+                android:layout_width="match_parent"
+                android:layout_height="1px"
+                android:background="@android:color/darker_gray"/>
+
+            <TextView
+                android:id="@+id/carDetails"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="@dimen/mp_10"
+                android:drawableStart="@drawable/ic_assignment_black_24px"
+                android:drawablePadding="@dimen/mp_10"
+                android:gravity="start|center_vertical"
+                android:padding="@dimen/mp_10"/>
+            <View
+                android:layout_width="match_parent"
+                android:layout_height="1px"
+                android:background="@android:color/darker_gray"/>
+
+            <TextView
+                android:id="@+id/driverName"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="@dimen/mp_10"
+                android:drawableStart="@drawable/ic_action_full_name"
+                android:drawablePadding="@dimen/mp_10"
+                android:gravity="start|center_vertical"
+                android:padding="@dimen/mp_10"/>
+            <View
+                android:layout_width="match_parent"
+                android:layout_height="1px"
+                android:background="@android:color/darker_gray"/>
+            <TextView
+                android:id="@+id/driverMobile"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="@dimen/mp_10"
+                android:drawableStart="@drawable/ic_action_mobile_number"
+                android:drawablePadding="@dimen/mp_10"
+                android:gravity="start|center_vertical"
+                android:padding="@dimen/mp_10"/>
+            <View
+                android:layout_width="match_parent"
+                android:layout_height="1px"
+                android:background="@android:color/darker_gray"/>
+            <TextView
+                android:id="@+id/driverRegNo"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="@dimen/mp_10"
+                android:drawableStart="@drawable/ic_assignment_black_24px"
+                android:drawablePadding="@dimen/mp_10"
+                android:gravity="start|center_vertical"
+                android:padding="@dimen/mp_10"/>
+            <View
+                android:layout_width="match_parent"
+                android:layout_height="1px"
+                android:background="@android:color/darker_gray"/>
+
+            <TextView
+                android:id="@+id/carType"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="@dimen/mp_10"
+                android:drawableStart="@drawable/ic_assignment_black_24px"
+                android:drawablePadding="@dimen/mp_10"
+                android:gravity="start|center_vertical"
+                android:padding="@dimen/mp_10"/>
+            <View
+                android:layout_width="match_parent"
+                android:layout_height="1px"
+                android:background="@android:color/darker_gray"/>
+
+            <TextView
+                android:id="@+id/carNumberOfSit"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="@dimen/mp_10"
+                android:drawableStart="@drawable/ic_assignment_black_24px"
+                android:drawablePadding="@dimen/mp_10"
+                android:gravity="start|center_vertical"
+                android:padding="@dimen/mp_10"/>
+            <View
+                android:layout_width="match_parent"
+                android:layout_height="1px"
+                android:background="@android:color/darker_gray"/>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal">
+
+                <CheckBox
+                    android:id="@+id/carActiveStatus"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:checked="true"
+                    android:text="Active" />
+
+                <CheckBox
+                    android:id="@+id/carACAvailableStatus"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:checked="true"
+                    android:text="Ac Available" />
+            </LinearLayout>
+        </LinearLayout>
+
+    </LinearLayout>
+
+
+</android.support.v4.widget.NestedScrollView>

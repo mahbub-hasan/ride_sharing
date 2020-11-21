@@ -1,0 +1,73 @@
+<?xml version="1.0" encoding="utf-8"?>
+<android.support.design.widget.CoordinatorLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context="com.oss_net.choloeksathe.activities.ForgetPasswordActivity">
+
+    <android.support.design.widget.AppBarLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:theme="@style/AppTheme.AppBarOverlay">
+
+        <android.support.v7.widget.Toolbar
+            android:id="@+id/toolbar"
+            android:layout_width="match_parent"
+            android:layout_height="?attr/actionBarSize"
+            android:background="?attr/colorPrimary"
+            app:popupTheme="@style/AppTheme.PopupOverlay" />
+
+    </android.support.design.widget.AppBarLayout>
+
+    <LinearLayout
+        xmlns:app="http://schemas.android.com/apk/res-auto"
+        xmlns:tools="http://schemas.android.com/tools"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:orientation="vertical"
+        tools:context="com.oss_net.choloeksathe.activities.ForgetPasswordActivity"
+        app:layout_behavior="@string/appbar_scrolling_view_behavior">
+
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="@string/forgot_password_process"
+            android:gravity="center_vertical"
+            android:padding="@dimen/mp_10"
+            android:typeface="sans"/>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical"
+            android:background="@drawable/drawable_rectangle"
+            android:layout_marginStart="@dimen/mp_10"
+            android:layout_marginEnd="@dimen/mp_10">
+            <EditText
+                android:id="@+id/tilEmail"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:background="@null"
+                android:padding="@dimen/mp_10"
+                android:hint="@string/email"
+                android:drawableStart="@drawable/ic_action_email"
+                android:drawablePadding="@dimen/mp_5"
+                android:inputType="textEmailAddress"/>
+        </LinearLayout>
+
+        <Button
+            android:id="@+id/buttonPasswordChange"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:background="@color/colorPrimaryDark"
+            android:layout_marginStart="@dimen/mp_20"
+            android:layout_marginEnd="@dimen/mp_20"
+            android:layout_marginTop="@dimen/mp_10"
+            android:text="Retrieve Password"
+            android:textColor="@color/colorButtonText"/>
+
+    </LinearLayout>
+
+</android.support.design.widget.CoordinatorLayout>
+

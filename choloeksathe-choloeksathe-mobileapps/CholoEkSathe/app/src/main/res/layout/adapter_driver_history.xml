@@ -1,0 +1,79 @@
+<?xml version="1.0" encoding="utf-8"?>
+<android.support.v7.widget.CardView
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:layout_marginTop="10dp"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    app:cardElevation="@dimen/mp_5"
+    android:layout_margin="@dimen/mp_5">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical">
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal"
+            android:padding="@dimen/mp_5">
+            <TextView
+                android:id="@+id/requestId"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:gravity="start|center_vertical"/>
+            <TextView
+                android:id="@+id/amount"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:gravity="end|center_vertical"/>
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal"
+            android:padding="@dimen/mp_5">
+            <TextView
+                android:id="@+id/driver_journeyDate"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:gravity="start|center_vertical"
+                android:drawableStart="@drawable/ic_action_date"/>
+        </LinearLayout>
+
+        <TextView
+            android:id="@+id/driver_sourcePoint"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:gravity="start|center_vertical"
+            android:drawableStart="@drawable/ic_action_source"
+            android:layout_marginStart="@dimen/mp_10"
+            android:maxLines="1"
+            android:ellipsize="end"
+            android:padding="@dimen/mp_5"/>
+        <TextView
+            android:id="@+id/driver_destinationPoint"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:drawableStart="@drawable/ic_action_destination"
+            android:gravity="center_vertical|start"
+            android:layout_marginStart="@dimen/mp_10"
+            android:lines="1"
+            android:padding="@dimen/mp_5"/>
+
+        <View
+            android:layout_width="match_parent"
+            android:layout_height="1dp"
+            android:background="@color/colorPrimaryDark"/>
+
+
+    </LinearLayout>
+
+
+
+
+</android.support.v7.widget.CardView>

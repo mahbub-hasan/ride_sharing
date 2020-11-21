@@ -1,0 +1,90 @@
+<?xml version="1.0" encoding="utf-8"?>
+<android.support.design.widget.CoordinatorLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context="com.oss_net.choloeksathe.activities.driver.DriverMainActivity">
+
+    <android.support.design.widget.AppBarLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:theme="@style/AppTheme.AppBarOverlay">
+
+        <android.support.v7.widget.Toolbar
+            android:id="@+id/toolbar"
+            android:layout_width="match_parent"
+            android:layout_height="?attr/actionBarSize"
+            android:background="?attr/colorPrimary"
+            app:popupTheme="@style/AppTheme.PopupOverlay" />
+
+    </android.support.design.widget.AppBarLayout>
+
+    <include layout="@layout/content_driver_main" />
+
+    <android.support.design.widget.BottomNavigationView
+        android:id="@+id/bottomNavigationView"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_gravity="bottom"
+        android:background="?attr/colorPrimary"
+        app:menu="@menu/menu_driver_main"
+        app:itemIconTint="@color/colorWhite"
+        app:itemTextColor="@color/colorWhite">
+
+    </android.support.design.widget.BottomNavigationView>
+
+    <com.github.clans.fab.FloatingActionMenu
+        android:id="@+id/floatingActionMenu"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_gravity="bottom|right"
+        android:layout_margin="@dimen/fab_margin"
+        app:menu_colorNormal="#da3c2f"
+        app:menu_colorPressed="#dc4b3f"
+        app:menu_colorRipple="#99d4d4d4"
+        app:menu_fab_size="normal"
+        app:menu_labels_showShadow="true"
+        app:menu_labels_singleLine="false"
+        app:menu_labels_textColor="#f2f1f1"
+        app:menu_labels_textSize="15sp"
+        app:menu_openDirection="up"
+        app:menu_shadowColor="#66aff198"
+        app:menu_shadowRadius="4dp"
+        app:menu_shadowXOffset="1dp"
+        app:menu_shadowYOffset="4dp"
+        app:menu_showShadow="true"
+        android:visibility="gone">
+
+        <com.github.clans.fab.FloatingActionButton
+            android:id="@+id/fabShareACar"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            app:fab_label="Share a car"
+            app:fab_size="mini"/>
+
+        <com.github.clans.fab.FloatingActionButton
+            android:id="@+id/fabCarInfo"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            app:fab_label="Car info"
+            app:fab_size="mini"/>
+
+        <com.github.clans.fab.FloatingActionButton
+            android:id="@+id/fabProfile"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            app:fab_label="Profile"
+            app:fab_size="mini"/>
+
+        <com.github.clans.fab.FloatingActionButton
+            android:id="@+id/fabLogout"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            app:fab_label="Logout"
+            app:fab_size="mini"/>
+
+
+    </com.github.clans.fab.FloatingActionMenu>
+
+</android.support.design.widget.CoordinatorLayout>

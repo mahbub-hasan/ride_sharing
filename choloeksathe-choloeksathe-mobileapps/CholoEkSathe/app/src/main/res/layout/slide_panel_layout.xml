@@ -1,0 +1,71 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/colorApplicationBackground"
+    android:orientation="vertical"
+    android:clickable="true"
+    android:focusable="false"
+    android:id="@+id/dragView">
+
+    <ImageView
+        android:id="@+id/imageSlideUp"
+        android:layout_width="50dp"
+        android:layout_height="wrap_content"
+        android:layout_gravity="center"
+        android:src="@drawable/ic_action_slide_up"
+        android:contentDescription="@string/todo"/>
+
+    <ImageView
+        android:id="@+id/imageSlideDown"
+        android:layout_width="50dp"
+        android:layout_height="wrap_content"
+        android:layout_gravity="center"
+        android:src="@drawable/ic_action_slide_down"
+        android:contentDescription="@string/todo"
+        android:visibility="gone"/>
+
+    <TextView
+        android:id="@+id/automaticStartTime"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:gravity="center"/>
+
+    <TextView
+        android:id="@+id/googleMapNavigation"
+        android:layout_width="130dp"
+        android:layout_height="wrap_content"
+        android:layout_gravity="center"
+        android:layout_marginBottom="10dp"
+        android:layout_marginTop="@dimen/mp_10"
+        android:background="#BB000000"
+        android:drawableStart="@drawable/ic_action_navigation"
+        android:gravity="center"
+        android:textStyle="bold"
+        android:padding="@dimen/mp_5"
+        android:text="@string/navigation"
+        android:textColor="@color/colorWhite" />
+
+    <android.support.v7.widget.RecyclerView
+        android:id="@+id/interestedPassengerList"
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:layout_weight="1"
+        android:layout_marginTop="@dimen/mp_10"
+        android:layout_marginStart="@dimen/mp_3"
+        android:layout_marginEnd="@dimen/mp_3">
+
+    </android.support.v7.widget.RecyclerView>
+
+    <TextView
+        android:id="@+id/tvNoPassengerMessage"
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:layout_weight="1"
+        android:text="Sorry no passenger has been connect yet."
+        android:gravity="center"
+        android:visibility="gone"/>
+
+
+</LinearLayout>

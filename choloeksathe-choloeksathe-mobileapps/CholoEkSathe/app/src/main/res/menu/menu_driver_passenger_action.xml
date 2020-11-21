@@ -1,0 +1,18 @@
+<?xml version="1.0" encoding="utf-8"?>
+<menu xmlns:android="http://schemas.android.com/apk/res/android">
+    <item
+        android:id="@+id/action_request_accept"
+        android:title="Accept"/>
+    <item
+        android:id="@+id/action_request_reject"
+        android:title="Reject"/>
+    <item
+        android:id="@+id/action_passenger_journey_start"
+        android:title="Start"/>
+    <item
+        android:id="@+id/action_passenger_journey_stop"
+        android:title="End"/>
+    <item
+        android:id="@+id/action_call"
+        android:title="Call"/>
+</menu>

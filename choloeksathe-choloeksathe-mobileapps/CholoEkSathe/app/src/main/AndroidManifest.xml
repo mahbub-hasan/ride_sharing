@@ -1,0 +1,223 @@
+<?xml version="1.0" encoding="utf-8"?>
+<manifest xmlns:android="http://schemas.android.com/apk/res/android"
+    package="com.oss_net.choloeksathe">
+
+    <uses-permission android:name="android.permission.ACCESS_COARSE_LOCATION" />
+    <uses-permission android:name="android.permission.INTERNET" />
+    <uses-permission android:name="android.permission.ACCESS_FINE_LOCATION" />
+    <uses-permission android:name="android.permission.WRITE_EXTERNAL_STORAGE" />
+    <uses-permission android:name="android.permission.CAMERA" />
+    <uses-permission android:name="android.permission.ACCESS_NETWORK_STATE" />
+    <uses-permission android:name="android.permission.CALL_PHONE" />
+    <uses-permission android:name="android.permission.RECEIVE_SMS" />
+    <uses-permission android:name="android.permission.READ_SMS" />
+
+    <uses-feature
+        android:name="android.hardware.Camera"
+        android:required="true" />
+    <uses-feature
+        android:glEsVersion="0x00020000"
+        android:required="true" />
+
+    <permission
+        android:name="com.oss_net.choloeksathe.permission.C2D_MESSAGE"
+        android:protectionLevel="signature" />
+
+    <uses-permission android:name="com.google.android.c2dm.permission.RECEIVE" />
+
+    <application
+        android:name=".base.App"
+        android:allowBackup="true"
+        android:icon="@mipmap/ic_launcher"
+        android:label="@string/app_name"
+        android:roundIcon="@mipmap/ic_launcher_round"
+        android:supportsRtl="true"
+        android:theme="@style/AppTheme">
+        <meta-data
+            android:name="com.google.android.gms.version"
+            android:value="@integer/google_play_services_version" />
+        <meta-data
+            android:name="com.google.android.geo.API_KEY"
+            android:value="@string/map_release_key" />
+
+        <activity android:name=".activities.SplashActivity">
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN" />
+
+                <category android:name="android.intent.category.LAUNCHER" />
+            </intent-filter>
+        </activity>
+
+        <service android:name=".base.FCMInstanceIDService">
+            <intent-filter>
+                <action android:name="com.google.firebase.INSTANCE_ID_EVENT" />
+            </intent-filter>
+        </service>
+        <service android:name=".base.FCMMessagingService">
+            <intent-filter>
+                <action android:name="com.google.firebase.MESSAGING_EVENT" />
+            </intent-filter>
+        </service>
+
+        <activity
+            android:name=".activities.LoginActivity"
+            android:label="@string/title_activity_login"
+            android:theme="@style/AppTheme.NoActionBar" />
+        <activity
+            android:name=".activities.RegistrationActivity"
+            android:label="@string/title_activity_registration"
+            android:parentActivityName=".activities.LoginActivity"
+            android:theme="@style/AppTheme">
+            <meta-data
+                android:name="android.support.PARENT_ACTIVITY"
+                android:value="com.oss_net.choloeksathe.activities.LoginActivity" />
+        </activity>
+
+        <service
+            android:name=".base.DownloadService"
+            android:exported="false">
+            <intent-filter>
+                <action android:name="com.oss_net.choloeksathe.start" />
+            </intent-filter>
+        </service>
+
+        <activity
+            android:name=".activities.driver.DriverCarSetupActivity"
+            android:label="@string/title_activity_driver_car_setup"
+            android:parentActivityName=".activities.driver.DriverHomeActivity"
+            android:theme="@style/AppTheme">
+            <meta-data
+                android:name="android.support.PARENT_ACTIVITY"
+                android:value="com.oss_net.choloeksathe.activities.driver.DriverHomeActivity" />
+        </activity>
+        <activity
+            android:name=".activities.driver.DriverCarShareActivity"
+            android:label="@string/title_activity_driver_car_sahre"
+            android:parentActivityName=".activities.driver.DriverHomeActivity"
+            android:theme="@style/AppTheme">
+            <meta-data
+                android:name="android.support.PARENT_ACTIVITY"
+                android:value="com.oss_net.choloeksathe.activities.driver.DriverHomeActivity" />
+        </activity>
+        <activity
+            android:name=".activities.driver.DriverCarShareListInfoActivity"
+            android:label="@string/title_activity_driver_car_share_list_info"
+            android:parentActivityName=".activities.driver.DriverHomeActivity"
+            android:theme="@style/AppTheme">
+            <meta-data
+                android:name="android.support.PARENT_ACTIVITY"
+                android:value="com.oss_net.choloeksathe.activities.driver.DriverHomeActivity" />
+        </activity>
+        <activity
+            android:name=".activities.passenger.PassengerHomePageActivity"
+            android:label="@string/title_activity_passenger_home_page"
+            android:theme="@style/AppTheme" />
+        <activity
+            android:name=".activities.driver.DriverProfileUpdateActivity"
+            android:label="@string/title_activity_driver_profile_update"
+            android:parentActivityName=".activities.driver.DriverHomeActivity"
+            android:theme="@style/AppTheme">
+            <meta-data
+                android:name="android.support.PARENT_ACTIVITY"
+                android:value="com.oss_net.choloeksathe.activities.driver.DriverHomeActivity" />
+        </activity>
+        <activity
+            android:name=".activities.driver.DriverUserProfileUpdateActivity"
+            android:label="@string/title_activity_driver_user_profile_update"
+            android:parentActivityName=".activities.driver.DriverProfileUpdateActivity"
+            android:theme="@style/AppTheme">
+            <meta-data
+                android:name="android.support.PARENT_ACTIVITY"
+                android:value="com.oss_net.choloeksathe.activities.driver.DriverProfileUpdateActivity" />
+        </activity>
+        <activity
+            android:name=".activities.driver.DriverCarInfoUpdateActivity"
+            android:label="@string/title_activity_driver_car_info_update"
+            android:parentActivityName=".activities.driver.DriverProfileUpdateActivity"
+            android:theme="@style/AppTheme">
+            <meta-data
+                android:name="android.support.PARENT_ACTIVITY"
+                android:value="com.oss_net.choloeksathe.activities.driver.DriverProfileUpdateActivity" />
+        </activity>
+        <activity
+            android:name=".activities.passenger.PassengerProfileActivity"
+            android:label="@string/title_activity_passenger_profile"
+            android:parentActivityName=".activities.passenger.PassengerHomePageActivity"
+            android:theme="@style/AppTheme">
+            <meta-data
+                android:name="android.support.PARENT_ACTIVITY"
+                android:value="com.oss_net.choloeksathe.activities.passenger.PassengerHomePageActivity" />
+        </activity>
+        <activity
+            android:name=".activities.passenger.PassengerProfileUpdateActivity"
+            android:label="@string/title_activity_passenger_profile_update"
+            android:parentActivityName=".activities.passenger.PassengerProfileActivity"
+            android:theme="@style/AppTheme">
+            <meta-data
+                android:name="android.support.PARENT_ACTIVITY"
+                android:value="com.oss_net.choloeksathe.activities.passenger.PassengerProfileActivity" />
+        </activity>
+        <activity
+            android:name=".activities.passenger.PassengerHistoryActivity"
+            android:label="@string/title_activity_passenger_history"
+            android:parentActivityName=".activities.passenger.PassengerHomePageActivity"
+            android:theme="@style/AppTheme">
+            <meta-data
+                android:name="android.support.PARENT_ACTIVITY"
+                android:value="com.oss_net.choloeksathe.activities.passenger.PassengerHomePageActivity" />
+        </activity>
+        <activity
+            android:name=".activities.PasswordChangeActivity"
+            android:label="@string/title_activity_password_change"
+            android:theme="@style/AppTheme" />
+        <activity
+            android:name=".activities.driver.DriverNavigationActivity"
+            android:label="@string/title_activity_driver_navigation"
+            android:parentActivityName=".activities.driver.DriverHomeActivity"
+            android:theme="@style/AppTheme">
+            <meta-data
+                android:name="android.support.PARENT_ACTIVITY"
+                android:value="com.oss_net.choloeksathe.activities.driver.DriverHomeActivity" />
+        </activity>
+        <activity
+            android:name=".activities.ForgetPasswordActivity"
+            android:label="Retrieve Password"
+            android:parentActivityName=".activities.LoginActivity"
+            android:theme="@style/AppTheme">
+            <meta-data
+                android:name="android.support.PARENT_ACTIVITY"
+                android:value=".activities.LoginActivity" />
+        </activity>
+        <activity
+            android:name=".activities.driver.DriverHistoryActivity"
+            android:label="History"
+            android:parentActivityName=".activities.driver.DriverHomeActivity"
+            android:theme="@style/AppTheme">
+            <meta-data
+                android:name="android.support.PARENT_ACTIVITY"
+                android:value="com.oss_net.choloeksathe.activities.driver.DriverHomeActivity" />
+        </activity>
+        <activity android:name=".activities.driver.DriverSettingsActivity" />
+        <activity android:name=".activities.driver.DriverHomeActivity" />
+        <activity
+            android:name=".activities.driver.DriverCurrentSessionActivity"
+            android:label="@string/title_activity_driver_current_session"
+            android:theme="@style/AppTheme" />
+        <activity
+            android:name=".activities.MobileVerificationActivity"
+            android:label="@string/title_activity_mobile_verification"
+            android:theme="@style/AppTheme" />
+        <activity
+            android:name=".activities.PaymentWithRatingActivity"
+            android:label="@string/title_activity_paymentwith_rating"
+            android:theme="@style/AppTheme" />
+        <activity android:name=".activities.LocationSearchActivity" />
+        <activity android:name=".activities.SearchActivity" />
+        <activity android:name=".activities.driver.DriverCarShareFinalActivity" />
+
+        <service
+            android:name=".base.FCMChangeService"
+            android:exported="false"></service>
+    </application>
+
+</manifest>

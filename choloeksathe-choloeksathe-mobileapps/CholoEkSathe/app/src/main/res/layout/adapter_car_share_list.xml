@@ -1,0 +1,118 @@
+<?xml version="1.0" encoding="utf-8"?>
+<android.support.v7.widget.CardView
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    app:cardElevation="3dp"
+    app:contentPadding="5dp"
+    android:layout_marginBottom="3dp">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal"
+            android:gravity="center">
+            <TextView
+                android:id="@+id/requestId"
+                android:layout_width="0dp"
+                android:layout_weight="1"
+                android:layout_height="wrap_content"
+                android:textSize="13sp"
+                android:typeface="monospace"/>
+            <TextView
+                android:id="@+id/activeStatus"
+                android:layout_width="0dp"
+                android:layout_weight="1"
+                android:layout_height="wrap_content"
+                android:textAlignment="textEnd"
+                android:layout_marginEnd="5dp"
+                android:text="New"
+                android:textColor="@color/colorAccent"
+                android:typeface="monospace"/>
+        </LinearLayout>
+
+        <TextView
+            android:id="@+id/requestDate"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:textSize="13sp"
+            android:drawableStart="@drawable/ic_action_date"
+            android:gravity="left|center_vertical"
+            android:layout_marginTop="3dp"
+            android:text="2017-12-12"/>
+
+        <TextView
+            android:id="@+id/startLocation"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:drawableStart="@drawable/ic_action_source"
+            android:gravity="left|center_vertical"
+            android:layout_marginStart="10dp"
+            android:maxLines="1"
+            android:ellipsize="end"
+            android:layout_marginTop="3dp"/>
+        <TextView
+            android:id="@+id/stopLocation"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:drawableStart="@drawable/ic_action_destination"
+            android:gravity="left|center_vertical"
+            android:maxLines="1"
+            android:ellipsize="end"
+            android:layout_marginStart="10dp"/>
+
+        <HorizontalScrollView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="@dimen/mp_5">
+
+            <LinearLayout
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal"
+                android:padding="@dimen/mp_5">
+
+                <Button
+                    android:id="@+id/driverCancelRequest"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:background="@drawable/drawable_button_red"
+                    android:text="@string/cancel_request"
+                    android:padding="@dimen/mp_10"
+                    android:textColor="@color/colorButtonText"
+                    android:layout_marginEnd="2dp"/>
+
+                <Button
+                    android:id="@+id/driverJourneyStart"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:background="@drawable/drawable_button_green"
+                    android:text="@string/start_journey"
+                    android:padding="@dimen/mp_10"
+                    android:textColor="@color/colorButtonText"
+                    android:layout_marginStart="2dp"
+                    android:layout_marginEnd="2dp"/>
+
+                <Button
+                    android:id="@+id/driverJourneyStop"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:background="@drawable/drawable_button_green"
+                    android:text="@string/stop_journey"
+                    android:padding="@dimen/mp_10"
+                    android:textColor="@color/colorButtonText"
+                    android:layout_marginStart="2dp"/>
+
+            </LinearLayout>
+
+        </HorizontalScrollView>
+
+    </LinearLayout>
+
+</android.support.v7.widget.CardView>

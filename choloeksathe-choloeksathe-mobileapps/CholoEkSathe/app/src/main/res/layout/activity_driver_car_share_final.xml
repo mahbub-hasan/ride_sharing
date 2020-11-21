@@ -1,0 +1,43 @@
+<?xml version="1.0" encoding="utf-8"?>
+<com.sothree.slidinguppanel.SlidingUpPanelLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    tools:context="com.oss_net.choloeksathe.activities.driver.DriverCarShareFinalActivity"
+    tools:showIn="@layout/activity_driver_car_share_final"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:id="@+id/slidingPanel"
+    android:gravity="bottom"
+    app:umanoPanelHeight="70dp"
+    app:umanoShadowHeight="5dp"
+    app:umanoParallaxOffset="100dp"
+    app:umanoDragView="@+id/dragView"
+    app:umanoOverlay="true"
+    app:umanoScrollableView="@+id/dragView">
+
+    <FrameLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+        <com.google.android.gms.maps.MapView
+            android:id="@+id/mapview"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent">
+
+        </com.google.android.gms.maps.MapView>
+
+        <ImageView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="10dp"
+            android:layout_marginLeft="10dp"
+            android:id="@+id/ivBack"
+            android:src="@drawable/ic_arrow_back_black_24px"/>
+
+    </FrameLayout>
+
+
+    <include layout="@layout/fragment_car_share_settings"/>
+
+</com.sothree.slidinguppanel.SlidingUpPanelLayout>

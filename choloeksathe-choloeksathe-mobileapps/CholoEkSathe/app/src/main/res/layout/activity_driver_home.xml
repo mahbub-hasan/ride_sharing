@@ -1,0 +1,267 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    android:background="@color/colorApplicationBackground"
+    tools:context="com.oss_net.choloeksathe.activities.driver.DriverHomeActivity">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:layout_weight="0.82"
+        android:orientation="vertical"
+        android:background="@drawable/header_nav_bar">
+
+        <!-- Driver Basic Information -->
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_margin="@dimen/mp_10">
+
+            <de.hdodenhof.circleimageview.CircleImageView
+                android:id="@+id/driverImage"
+                android:layout_width="70dp"
+                android:layout_height="70dp"
+                android:src="@mipmap/ic_launcher"
+                app:civ_border_width="2dp"
+                app:civ_border_color="@color/colorImageBorder"/>
+
+            <LinearLayout
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:background="@drawable/drawable_rating"
+                android:orientation="horizontal"
+                android:gravity="center"
+                android:padding="3dp"
+                android:layout_below="@id/driverImage"
+                android:layout_marginTop="-20dp"
+                android:layout_marginStart="7dp">
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:id="@+id/rating"
+                    android:text="4.5/5"
+                    android:layout_marginStart="@dimen/mp_3"
+                    android:layout_marginEnd="@dimen/mp_3"
+                    android:textColor="@color/colorWhite"
+                    android:drawableStart="@drawable/ic_thumb_up_white_18px"/>
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="vertical"
+                android:layout_toEndOf="@id/driverImage"
+                android:layout_marginTop="5dp"
+                android:layout_marginStart="@dimen/mp_10"
+                android:layout_centerVertical="true">
+                <TextView
+                    android:id="@+id/driverName"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:gravity="center_vertical"
+                    android:textSize="15sp"
+                    android:textColor="@color/colorWhite"/>
+                <TextView
+                    android:id="@+id/drivercontactNumber"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:gravity="center_vertical"
+                    android:textSize="15sp"
+                    android:textColor="@color/colorWhite"/>
+            </LinearLayout>
+        </RelativeLayout>
+
+        <!-- Driver amount collect in total -->
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal"
+            android:layout_marginTop="-7dp"
+            android:layout_marginStart="@dimen/mp_10"
+            android:layout_marginEnd="@dimen/mp_10">
+            <TextView
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="1.3"
+                android:text="Total Income"
+                android:textColor="@color/colorWhite"
+                android:textSize="15sp"/>
+            <TextView
+                android:id="@+id/drivertotalIncome"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="0.7"
+                android:gravity="center_vertical"
+                android:textSize="13sp"
+                android:drawableStart="@drawable/ic_action_taka"
+                android:textColor="@color/colorWhite"/>
+        </LinearLayout>
+
+        <!-- Driver last collect in total -->
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal"
+            android:layout_marginStart="@dimen/mp_10"
+            android:layout_marginEnd="@dimen/mp_10">
+            <TextView
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="1.3"
+                android:text="Last Income"
+                android:textSize="15sp"
+                android:textColor="@color/colorWhite"/>
+            <TextView
+                android:id="@+id/driverlastIncome"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="0.7"
+                android:gravity="center_vertical"
+                android:drawableStart="@drawable/ic_action_taka"
+                android:textSize="13sp"
+                android:textColor="@color/colorWhite"/>
+        </LinearLayout>
+
+        <!-- Driver current collect in total -->
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal"
+            android:layout_marginStart="@dimen/mp_10"
+            android:layout_marginEnd="@dimen/mp_10">
+            <TextView
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="1.3"
+                android:text="Current Income"
+                android:textSize="15sp"
+                android:textColor="@color/colorWhite"/>
+            <TextView
+                android:id="@+id/drivercurrentIncome"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="0.7"
+                android:gravity="center_vertical"
+                android:drawableStart="@drawable/ic_action_taka"
+                android:textSize="13sp"
+                android:textColor="@color/colorWhite"/>
+        </LinearLayout>
+
+
+
+    </LinearLayout>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:layout_weight="1.3"
+        android:orientation="vertical"
+        android:background="#fdfdfd"
+        android:padding="50dp">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:orientation="vertical">
+
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="0dp"
+                android:layout_weight="1"
+                android:orientation="horizontal">
+                <TextView
+                    android:id="@+id/shareACar"
+                    android:layout_width="0dp"
+                    android:layout_height="match_parent"
+                    android:layout_weight="1"
+                    android:text="Post"
+                    android:gravity="center"
+                    android:drawableTop="@drawable/ic_screen_share_black_24dp"
+                    android:padding="@dimen/mp_10"/>
+                <View
+                    android:layout_width="1dp"
+                    android:layout_height="match_parent"
+                    android:layout_marginTop="@dimen/mp_10"
+                    android:background="@android:color/darker_gray"/>
+
+                <TextView
+                    android:id="@+id/carShareHistory"
+                    android:layout_width="0dp"
+                    android:layout_height="match_parent"
+                    android:layout_weight="1"
+                    android:text="History"
+                    android:gravity="center"
+                    android:drawableTop="@drawable/ic_history_black_24dp"
+                    android:padding="@dimen/mp_10"/>
+            </LinearLayout>
+
+            <View
+                android:layout_width="match_parent"
+                android:layout_height="1dp"
+                android:layout_marginStart="30dp"
+                android:layout_marginEnd="30dp"
+                android:background="@android:color/darker_gray"/>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="0dp"
+                android:layout_weight="1"
+                android:orientation="horizontal">
+                <TextView
+                    android:id="@+id/userProfile"
+                    android:layout_width="0dp"
+                    android:layout_height="match_parent"
+                    android:layout_weight="1"
+                    android:text="Profile"
+                    android:gravity="center"
+                    android:drawableTop="@drawable/ic_profile_black_24dp"
+                    android:padding="@dimen/mp_10"/>
+
+                <View
+                    android:layout_width="1dp"
+                    android:layout_height="match_parent"
+                    android:layout_marginBottom="@dimen/mp_10"
+                    android:background="@android:color/darker_gray"/>
+
+                <TextView
+                    android:id="@+id/carSetup"
+                    android:layout_width="0dp"
+                    android:layout_height="match_parent"
+                    android:layout_weight="1"
+                    android:text="Car Setup"
+                    android:gravity="center"
+                    android:drawableTop="@drawable/ic_car_black_24dp"
+                    android:padding="@dimen/mp_10"/>
+            </LinearLayout>
+
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="0dp"
+                android:layout_weight="1"
+                android:orientation="horizontal">
+                <TextView
+                    android:id="@+id/settings"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:text="Logout"
+                    android:gravity="center"
+                    android:drawableTop="@drawable/ic_action_exit"
+                    android:padding="@dimen/mp_10"/>
+            </LinearLayout>
+        </LinearLayout>
+
+
+
+    </LinearLayout>
+
+</LinearLayout>
